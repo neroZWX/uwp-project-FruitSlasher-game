@@ -21,16 +21,16 @@ public class Spanwer : MonoBehaviour
             if (0 >= spawnTime)
             {  
             //随机产生多个水果
-            int fruitCount = Random.Range(1, 5);
-            for (int i = 0; i < fruitCount; i++) ;
+            int fruitCount = Random.Range(1,8);
+            for (int i = 0; i < fruitCount; i++) 
                 onSpawn(true);//召唤水果
-                spawnTime = 3f;//归零计时器
+                spawnTime = 2f;//归零计时器
                 //随机产生炸弹
             int bombNum = Random.Range(0, 100);
             if (bombNum > 70) {
                 onSpawn(false);
             }
-            spawnTime = 3f;//归零计时器
+            spawnTime = 2f;//归零计时器
         }
         }
     private int tmpZ = 0;

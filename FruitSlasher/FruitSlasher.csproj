@@ -84,9 +84,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scrpits\DestoryOnTime.cs" />
+    <Compile Include="Assets\Scrpits\EXIT.cs" />
     <Compile Include="Assets\Scrpits\MouseControl.cs" />
     <Compile Include="Assets\Scrpits\ObjectControl.cs" />
     <Compile Include="Assets\Scrpits\Spanwer.cs" />
+    <Compile Include="Assets\Scrpits\UIOver.cs" />
+    <Compile Include="Assets\Scrpits\UIScore.cs" />
     <Compile Include="Assets\Scrpits\UIStart.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
