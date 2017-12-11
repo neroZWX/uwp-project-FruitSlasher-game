@@ -8,13 +8,14 @@ public class UIStart : MonoBehaviour {
 
     private Button btnPlay;
     private Button btnSound;
+    private Button EXIT;
     private AudioSource audioSourceBG;
     private Image imgSound;
     public Sprite[] soundSprites;//声音图片变化
 
 	void Start () {
         getComponents();
-
+       // EXIT.onClick.AddListener(onPlayClick);
         btnPlay.onClick.AddListener(onPlayClick);
         btnSound.onClick.AddListener(onSoundClick);
 
@@ -22,6 +23,7 @@ public class UIStart : MonoBehaviour {
     private void getComponents() {
         btnPlay = transform.Find("btnPlay").GetComponent<Button>();
         btnSound = transform.Find("btnSound").GetComponent<Button>();
+        //EXIT = transform.Find("Exit").GetComponent<Button>();
         audioSourceBG = transform.Find("btnSound").GetComponent<AudioSource>();
         imgSound = transform.Find("btnSound").GetComponent<Image>();
     }
@@ -31,8 +33,10 @@ public class UIStart : MonoBehaviour {
         btnSound.onClick.RemoveListener(onSoundClick);
         
     }
+    
     void onPlayClick() {
         SceneManager.LoadScene("play", LoadSceneMode.Single);
+       // Application.Quit();
     }
     void onSoundClick() {
         if (audioSourceBG.isPlaying)
